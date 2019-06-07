@@ -1,0 +1,22 @@
+{
+  "name": "pcomm-calendar",
+  "version": "1.0.0",
+  "description": "A minimalist and flexible calendar.",
+  "main": "calendar.js",
+  "peerDependencies": {
+    "moment": "2.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PartnerComm/pcomm-vue-calendar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PartnerComm/pcomm-vue-calendar/issues"
+  },
+  "homepage": "https://github.com/PartnerComm/pcomm-vue-calendar#readme"
+}

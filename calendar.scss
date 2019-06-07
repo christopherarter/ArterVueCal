@@ -1,0 +1,86 @@
+$calendar-width: 100%;
+$day-block-width: 100%/7;
+$eventRadius: 20px;
+
+.calendar {
+	width: $calendar-width;
+	margin: 0 auto;
+	.days-of-week,
+	.days-of-month {
+		//Make the container display flex
+		display: flex;
+		//Move the days to the next row
+		flex-wrap: wrap;
+		width: 100%;
+		.day-block {
+			flex-basis: $day-block-width;
+			text-align: center;
+			// Make sure the padding and/or margins don't add to total width
+			box-sizing: border-box;
+		}
+	}
+	.days-of-week {
+		margin-bottom: 1em;
+		.day-block {
+			// padding: 1em;
+		}
+	}
+	.days-of-month {
+		.day-block {
+			// padding: 1em;
+			text-align: right;
+			min-height: 200px;
+		}
+	}
+}
+
+button:focus {
+	outline: 0;
+}
+
+.event {
+	display: inline-block;
+	border: 0;
+	background: #999;
+	color: #fff;
+	font-size: 11px;
+	width: 100%;
+	cursor: pointer;
+	margin: 10px 0;
+	min-height: 40px;
+	overflow: visible;
+}
+
+.event-beginning {
+	margin-left: 10%;
+	width: 90%;
+	border-top-left-radius: $eventRadius;
+	border-bottom-left-radius: $eventRadius;
+}
+
+.event-ending {
+	margin-right: 10%;
+	width: 90%;
+	border-top-right-radius: $eventRadius;
+	border-bottom-right-radius: $eventRadius;
+}
+
+.event-active {
+	background: blue;
+}
+
+$dayBackground: #f7f7f7;
+
+.day-label {
+	text-align: right;
+	padding-right: 0.5rem;
+}
+.day {
+	background: $dayBackground;
+	padding: 0;
+	cursor: pointer;
+}
+.day-blackout {
+	background: darken($dayBackground, 10%);
+	cursor: default;
+}
